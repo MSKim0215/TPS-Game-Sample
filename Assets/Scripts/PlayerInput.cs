@@ -2,10 +2,11 @@
 
 public class PlayerInput : MonoBehaviour
 {
-    public string fireButtonName = "Fire1";
-    public string jumpButtonName = "Jump";
     public string moveHorizontalAxisName = "Horizontal";
     public string moveVerticalAxisName = "Vertical";
+
+    public string fireButtonName = "Fire1";
+    public string jumpButtonName = "Jump";
     public string reloadButtonName = "Reload";
 
     public Vector2 moveInput { get; private set; }
@@ -15,8 +16,7 @@ public class PlayerInput : MonoBehaviour
     
     private void Update()
     {
-        if (GameManager.Instance != null
-            && GameManager.Instance.isGameover)
+        if (GameManager.Instance != null && GameManager.Instance.isGameover)
         {
             moveInput = Vector2.zero;
             fire = false;
